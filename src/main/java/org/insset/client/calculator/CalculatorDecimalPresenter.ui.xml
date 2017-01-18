@@ -13,13 +13,14 @@
             <g:FlowPanel>          
               <g:TextBox ui:field="valR" text=""/>
               <g:SubmitButton ui:field="boutonConvertRToA" text="Convertir"/>
+              <g:ResetButton ui:field="boutonClearR" text="Reset"/>
             </g:FlowPanel>
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelRToA" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel >
                 
-                <g:ResetButton ui:field="boutonClearR" text="Reset"/>
+                
             </g:FlowPanel>
         </g:FlowPanel>
         <g:FlowPanel>
@@ -31,13 +32,14 @@
             <g:FlowPanel>          
               <g:TextBox ui:field="valA" text=""/>
               <g:SubmitButton ui:field="boutonConvertAToR" text="Convertir"/>
+              <g:ResetButton ui:field="boutonClearA" text="Reset"/>
             </g:FlowPanel>
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelAToR" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel>
                 
-                <g:ResetButton ui:field="boutonClearA" text="Reset"/>
+                
             </g:FlowPanel>
         </g:FlowPanel>
         <g:FlowPanel>
@@ -49,13 +51,14 @@
             <g:FlowPanel>          
               <g:TextBox ui:field="valD" text=""/>
               <g:SubmitButton ui:field="boutonConvertD" text="Convertir"/>
+               <g:ResetButton ui:field="boutonClearD" text="Reset"/>
             </g:FlowPanel>
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelD" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel>
                 
-                <g:ResetButton ui:field="boutonClearD" text="Reset"/>
+               
             </g:FlowPanel>
         </g:FlowPanel>
       <!--</g:Form>-->
