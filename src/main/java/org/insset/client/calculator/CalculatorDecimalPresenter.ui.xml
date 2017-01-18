@@ -18,10 +18,6 @@
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelRToA" ></g:Label>
             </g:FlowPanel>
-            <g:FlowPanel >
-                
-                
-            </g:FlowPanel>
         </g:FlowPanel>
         <g:FlowPanel>
         </g:FlowPanel>
@@ -37,10 +33,6 @@
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelAToR" ></g:Label>
             </g:FlowPanel>
-            <g:FlowPanel>
-                
-                
-            </g:FlowPanel>
         </g:FlowPanel>
         <g:FlowPanel>
         </g:FlowPanel>
@@ -55,10 +47,6 @@
             </g:FlowPanel>
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelD" ></g:Label>
-            </g:FlowPanel>
-            <g:FlowPanel>
-                
-               
             </g:FlowPanel>
         </g:FlowPanel>
       <!--</g:Form>-->
