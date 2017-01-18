@@ -53,6 +53,7 @@ public class CalculatorDecimalPresenter extends Composite {
     @UiField
     public Label errorLabelD;
 
+
     interface MainUiBinder extends UiBinder<HTMLPanel, CalculatorDecimalPresenter> {
     }
 
@@ -125,7 +126,7 @@ public class CalculatorDecimalPresenter extends Composite {
     private void convertRomanToArabe() {
         if (!FieldVerifier.isValidRoman(valR.getText())) {
             errorLabelRToA.addStyleName("serverResponseLabelError");
-            errorLabelRToA.setText("Format incorect");
+            errorLabelRToA.setText("Format incorrect");
             return;
         }
         service.convertRomanToArabe(valR.getText(), new AsyncCallback<Integer>() {
@@ -135,7 +136,7 @@ public class CalculatorDecimalPresenter extends Composite {
             }
 
             public void onSuccess(Integer result) {
-                new DialogBoxInssetPresenter("Convertion Roman to arabe", valR.getText(), String.valueOf(result));
+                new DialogBoxInssetPresenter("Conversion en chiffres arabes", valR.getText(), String.valueOf(result));
             }
         });
     }
@@ -147,7 +148,8 @@ public class CalculatorDecimalPresenter extends Composite {
         if (!FieldVerifier.isValidRoman(valA.getText())) {
             errorLabelAToR.addStyleName("serverResponseLabelError");
             errorLabelAToR.setText("Format incorect");
-            return;
+
+            return ;
         }
         service.convertArabeToRoman(Integer.parseInt(valA.getText()), new AsyncCallback<String>() {
             public void onFailure(Throwable caught) {
@@ -156,7 +158,7 @@ public class CalculatorDecimalPresenter extends Composite {
             }
 
             public void onSuccess(String result) {
-                new DialogBoxInssetPresenter("Convertion Arabe to Roman", valA.getText(), result);
+                new DialogBoxInssetPresenter("Conversion en chiffres romains", valA.getText(), result);
             }
         });
     }
@@ -179,7 +181,7 @@ public class CalculatorDecimalPresenter extends Composite {
             }
 
             public void onSuccess(String result) {
-                new DialogBoxInssetPresenter("Convertion Date", valD.getText(), result);
+                new DialogBoxInssetPresenter("Conversion date en chiffres romains", valD.getText(), result);
             }
         });
     }

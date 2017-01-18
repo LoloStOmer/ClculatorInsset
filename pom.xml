@@ -24,8 +24,8 @@
         <sonar.jdbc.url>
             jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8
         </sonar.jdbc.url>
-        <sonar.jdbc.username>sonar</sonar.jdbc.username>
-        <sonar.jdbc.password>sonar</sonar.jdbc.password>
+        <sonar.jdbc.username>root</sonar.jdbc.username>
+        <sonar.jdbc.password>root</sonar.jdbc.password>
         <!-- optional URL to server. Default value is http://localhost:9000 -->
         <sonar.host.url>
             http://localhost:9010/sonar
