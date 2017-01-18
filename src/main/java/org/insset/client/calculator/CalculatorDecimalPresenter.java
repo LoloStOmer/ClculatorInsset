@@ -17,15 +17,7 @@ import org.insset.client.service.RomanConverterService;
 import org.insset.client.service.RomanConverterServiceAsync;
 import org.insset.shared.FieldVerifier;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author talend
- */
+
 public class CalculatorDecimalPresenter extends Composite {
 
     @UiField
@@ -58,23 +50,16 @@ public class CalculatorDecimalPresenter extends Composite {
     }
 
     private static MainUiBinder ourUiBinder = GWT.create(MainUiBinder.class);
-    /**
-     * Create a remote service proxy to talk to the server-side Greeting
-     * service.
-     */
+    
     private final RomanConverterServiceAsync service = GWT.create(RomanConverterService.class);
 
-    /**
-     * Constructeur
-     */
+    
     public CalculatorDecimalPresenter() {
         initWidget(ourUiBinder.createAndBindUi(this));
         initHandler();
     }
 
-    /**
-     * Init des handler
-     */
+    
     private void initHandler() {
         boutonClearR.addClickHandler(new ClickHandler() {
             @Override
@@ -120,9 +105,7 @@ public class CalculatorDecimalPresenter extends Composite {
         });
     }
 
-    /**
-     * call server
-     */
+    
     private void convertRomanToArabe() {
         if (!FieldVerifier.isValidRoman(valR.getText())) {
             errorLabelRToA.addStyleName("serverResponseLabelError");
@@ -130,20 +113,18 @@ public class CalculatorDecimalPresenter extends Composite {
             return;
         }
         service.convertRomanToArabe(valR.getText(), new AsyncCallback<Integer>() {
+            @Override
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
-//                Window.alert(SERVER_ERROR);
             }
-
+            @Override
             public void onSuccess(Integer result) {
                 new DialogBoxInssetPresenter("Conversion en chiffres arabes", valR.getText(), String.valueOf(result));
             }
         });
     }
 
-    /**
-     * call server
-     */
+
     private void convertArabeToRoman() {
         if (!FieldVerifier.isValidRoman(valA.getText())) {
             errorLabelAToR.addStyleName("serverResponseLabelError");
@@ -152,34 +133,32 @@ public class CalculatorDecimalPresenter extends Composite {
             return ;
         }
         service.convertArabeToRoman(Integer.parseInt(valA.getText()), new AsyncCallback<String>() {
+            @Override
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
-//                Window.alert(SERVER_ERROR);
             }
-
+            @Override
             public void onSuccess(String result) {
                 new DialogBoxInssetPresenter("Conversion en chiffres romains", valA.getText(), result);
             }
         });
     }
 
-    /**
-     * call server
-     */
+    
     private void convertDate() {
-        //Verif
+ 
         if (!FieldVerifier.isValidDate(valD.getText())) {
             errorLabelAToR.addStyleName("serverResponseLabelError");
             errorLabelAToR.setText("Format incorect");
             return;
         }
-        //call server
+
         service.convertDateYears(valD.getText(), new AsyncCallback<String>() {
+            @Override
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
-//                Window.alert(SERVER_ERROR);
             }
-
+            @Override
             public void onSuccess(String result) {
                 new DialogBoxInssetPresenter("Conversion date en chiffres romains", valD.getText(), result);
             }
